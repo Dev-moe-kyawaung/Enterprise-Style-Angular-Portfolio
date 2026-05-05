@@ -1,0 +1,20 @@
+src/
+├── app/
+│   ├── components/
+│   │   ├── header/
+│   │   ├── hero/
+│   │   ├── about/
+│   │   ├── skills/
+│   │   ├── portfolio/
+│   │   ├── experience/
+│   │   ├── testimonials/
+│   │   ├── contact/
+│   │   └── footer/
+│   ├── shared/
+│   ├── models/
+│   └── services/
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── data/
+└── styles/
