@@ -1,0 +1,138 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+
+  &.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 0.5rem 0;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.5rem;
+
+      .logo-text {
+        background: linear-gradient(135deg, $secondary, $accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .logo-subtext {
+        color: $gray-100;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+
+    .nav-link {
+      color: $light;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &.active::after,
+      &:hover::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, $secondary, $accent);
+      }
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &.btn-primary {
+      background: linear-gradient(135deg, $secondary, $accent);
+      color: white;
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6);
+      }
+    }
+
+    &.btn-outline {
+      color: $light;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: $secondary;
+        color: $secondary;
+      }
+    }
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 4px;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: $light;
+      transition: 0.3s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+    }
+  }
+}
