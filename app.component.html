@@ -1,0 +1,51 @@
+<div class="portfolio-app">
+  <!-- Loading Screen -->
+  <div class="loading-screen" *ngIf="!isLoaded">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content" [class.loaded]="isLoaded">
+    
+    <!-- Navigation -->
+    <app-header></app-header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <app-hero></app-hero>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <app-about></app-about>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <app-skills></app-skills>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <app-portfolio></app-portfolio>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+      <app-experience></app-experience>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <app-testimonials></app-testimonials>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <app-contact></app-contact>
+    </section>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+  </main>
+</div>
