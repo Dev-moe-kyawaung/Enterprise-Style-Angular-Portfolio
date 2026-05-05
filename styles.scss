@@ -1,0 +1,81 @@
+// Enterprise Color Palette
+$primary: #1e3a8a;
+$secondary: #3b82f6;
+$accent: #10b981;
+$dark: #0f172a;
+$light: #f8fafc;
+$gray-100: #f1f5f9;
+$gray-800: #1e293b;
+
+// Typography
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: #334155;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.portfolio-app {
+  min-height: 100vh;
+  position: relative;
+}
+
+// Glassmorphism Effect
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+// Container
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Section Padding
+section {
+  padding: 120px 0;
+  &.hero-section {
+    padding: 200px 0 120px;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  section {
+    padding: 80px 0;
+  }
+}
